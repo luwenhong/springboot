@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /*
 * @requestbody
@@ -9,10 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 * */
 @RestController
 public class HelloController {
-	
-	@RequestMapping("/hello")
-	public String handle01(){
-		return "hello, springboot2";
+	@RequestMapping("/car")
+	public String test1(){
+		
+		return "成功了";}
+		
+	@PostMapping("/login")
+	public String login(String name,Integer pwd){
+		return name+pwd ;
 	}
-	
 }
